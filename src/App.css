@@ -1,0 +1,11 @@
+/* FIX AUTOFILL BACKGROUND */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #e6dfd2 inset !important;
+  -webkit-text-fill-color: #374151 !important;
+  background-color: #e6dfd2 !important;
+  transition: background-color 9999s ease-in-out 0s;
+  border-radius: 12px;
+}
