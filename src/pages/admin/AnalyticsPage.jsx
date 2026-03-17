@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import AnalyticsOverview from '../../components/admin/analytics/AnalyticsByBrowser';
+import AnalyticsOverview from '../../components/admin/analytics/AnalyticsOverview';
 import AnalyticsByCountry from '../../components/admin/analytics/AnalyticsByCountry';
 import AnalyticsByDevice from '../../components/admin/analytics/AnalyticsByDevice';
 import AnalyticsByBrowser from '../../components/admin/analytics/AnalyticsByBrowser';

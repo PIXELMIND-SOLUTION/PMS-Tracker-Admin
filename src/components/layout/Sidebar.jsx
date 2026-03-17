@@ -163,8 +163,8 @@ const menuItems = [
       { title: 'Recent', path: '/visitors/recent', icon: Clock },
     ],
   },
-  { title: 'Reports', icon: FileText, path: '/reports' },
-  { title: 'Help', icon: HelpCircle, path: '/help' },
+  // { title: 'Reports', icon: FileText, path: '/reports' },
+  // { title: 'Help', icon: HelpCircle, path: '/help' },
 ];
 
 const Sidebar = () => {
