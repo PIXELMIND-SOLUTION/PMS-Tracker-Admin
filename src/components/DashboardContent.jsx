@@ -109,7 +109,7 @@ const DashboardContent = () => {
     setLoading(true);
     try {
       const qs = new URLSearchParams({ page:currentPage, limit:itemsPerPage, timeRange, ...filters, search:searchTerm });
-      const res = await fetch(`http://localhost:5000/api/dashboard/summary?${qs}`);
+      const res = await fetch(`https://pms-tracker-3.onrender.com/api/dashboard/summary?${qs}`);
       if (!res.ok) throw new Error('Failed to fetch');
       const data = await res.json();
       setDashData({ ...data, charts:{ ...data.charts, weekly:genWeekly(), monthly:genMonthly(), traffic:genTraffic(), engagement:genEngagement() }});
@@ -122,7 +122,7 @@ const DashboardContent = () => {
 
   const fetchRealtime = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/dashboard/realtime');
+      const res = await fetch('https://pms-tracker-3.onrender.com/api/dashboard/realtime');
       if (!res.ok) return;
       const data = await res.json();
       setDashData(p => ({ ...p, overview:{ ...p.overview, activeNow:data.stats.activeNow }}));
@@ -132,7 +132,7 @@ const DashboardContent = () => {
   const fetchIpDetails = async (ip) => {
     setLoadingIp(true);
     try {
-      const res = await fetch(`http://localhost:5000/api/ip-details/${ip}`);
+      const res = await fetch(`https://pms-tracker-3.onrender.com/api/ip-details/${ip}`);
       if (!res.ok) throw new Error('Failed');
       setIpDetails(await res.json());
     } catch { setIpDetails(MOCK_IP); }
